@@ -421,3 +421,27 @@ h6,
 }
 
 
+/* Estilo padrão (desktop/tablet) */
+img.img-fluid {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item-price {
+  font-size: 1rem; /* padrão */
+}
+
+/* Estilo específico para telas menores (até 576px, celular em modo retrato) */
+@media (max-width: 576px) {
+  img.img-fluid {
+    width: 100px;
+    height: 100px;
+  }
+
+  .item-price,
+  .text-uppercase,
+  span {
+    font-size: 0.85rem; /* reduz fonte */
+  }
+}
