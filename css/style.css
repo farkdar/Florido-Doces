@@ -61,9 +61,10 @@ h6,
 }
 
 /* Tamanho do display-1 no Bootstrap: calc(1.625rem + 4.5vw), máx 5rem */
-.brand-logo{
+.brand-logo {
   height: calc((1.625rem + 4.5vw) * 1.6);
-  max-height: 9rem;   /* teto para não exagerar em telas enormes */
+  max-height: 9rem;
+  /* teto para não exagerar em telas enormes */
   width: auto;
   display: block;
   margin: 0 auto;
@@ -421,27 +422,29 @@ h6,
 }
 
 
-/* Estilo padrão (desktop/tablet) */
-img.img-fluid {
-  width: 150px;
-  height: 150px;
+/* Desktop / padrão */
+.product-thumb {
+  width: 170px;
+  height: 170px;
   object-fit: cover;
+  /* mantém quadrada sem distorcer */
+  border-radius: .5rem;
+  /* opcional */
 }
 
-.item-price {
-  font-size: 1rem; /* padrão */
-}
-
-/* Estilo específico para telas menores (até 576px, celular em modo retrato) */
+/* Celular */
 @media (max-width: 576px) {
-  img.img-fluid {
+  .product-thumb {
     width: 100px;
     height: 100px;
   }
 
+  .text-uppercase {
+    font-size: .95rem;
+  }
+
   .item-price,
-  .text-uppercase,
-  span {
-    font-size: 0.85rem; /* reduz fonte */
+  .bg-secondary span {
+    font-size: .9rem;
   }
 }

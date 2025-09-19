@@ -5,23 +5,24 @@
 
     // Render de um item (ajuste o HTML conforme seu layout)
     function renderItem({ img, titulo, preco, desc }) {
-        const priceHTML = preco ? `<div class="mt-2">${preco}</div>` : '';
+        const priceHTML = preco ? `<div class="item-price mt-2">${preco}</div>` : '';
 
         return `
     <div class="col-lg-6">
       <div class="d-flex h-100">
         <div class="flex-shrink-0">
-          <img class="img-fluid" src="${img}" alt="${titulo}" style="width:170px;height:170px;object-fit:cover;">
+          <img class="product-thumb" src="${img}" alt="${titulo}">
         </div>
         <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
           <h5 class="text-uppercase">${titulo}</h5>
           <span>${desc || ''}</span>
-          ${priceHTML} <!-- preço agora aparece depois da descrição -->
+          ${priceHTML}
         </div>
       </div>
     </div>
   `;
     }
+
 
 
 
