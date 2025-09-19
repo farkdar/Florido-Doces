@@ -1,0 +1,423 @@
+/********** Florido Doces — Tema Pastel **********
+Paleta proposta (não precisa usar todas em todas as páginas):
+  Primária (ação/destaques):      #FB9483
+  Secundária (fundos suaves):     #F2E9D4
+  Acento (hover/detalhes):        #F3B5A6
+  Escuro (texto/marrons):         #A56E44
+  Neutros suaves:                 #D2C889, #A6A055
+  Luz (fundos claríssimos):       #FBFAF6
+**************************************************/
+
+:root {
+  /* Variáveis do tema (template) */
+  --primary: #FB9483;
+  --secondary: #F2E9D4;
+  --light: #FBFAF6;
+  --dark: #A56E44;
+
+  /* Extras do branding (para você usar quando quiser) */
+  --accent: #F3B5A6;
+  /* hover / estados */
+  --muted: #D2C889;
+  /* divisórias / sutilezas */
+  --olive: #A6A055;
+  /* detalhes complementares */
+
+  /* Integração com Bootstrap 5 (faz .btn-primary, .text-primary etc. herdarem a cor) */
+  --bs-primary: var(--primary);
+  --bs-secondary: var(--secondary);
+  --bs-light: var(--light);
+  --bs-dark: var(--dark);
+}
+
+/* Tipografia do template */
+.font-secondary {
+  font-family: 'Pacifico', cursive;
+}
+
+h1,
+h2,
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+h3,
+h4,
+.font-weight-semi-bold {
+  font-weight: 600 !important;
+}
+
+h5,
+h6,
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
+/* Título da marca (nome da loja) */
+.brand-title {
+  font-family: "Kalnia", serif;
+  font-weight: 400 !important;
+  /* ou 500/600 se quiser um meio-termo */
+}
+
+/* Tamanho do display-1 no Bootstrap: calc(1.625rem + 4.5vw), máx 5rem */
+.brand-logo{
+  height: calc((1.625rem + 4.5vw) * 1.6);
+  max-height: 9rem;   /* teto para não exagerar em telas enormes */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* se o fundo for escuro e a logo precisar de leve destaque */
+.brand-logo {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, .25));
+}
+
+
+/* Botões */
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  transition: .3s ease;
+}
+
+/* Garante que btn-primary use a primária da marca */
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Suporte às utilitárias bg/text (se usar as classes do Bootstrap no HTML) */
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.bg-light {
+  background-color: var(--light) !important;
+}
+
+.bg-dark {
+  background-color: var(--dark) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.text-light {
+  color: var(--light) !important;
+}
+
+.text-dark {
+  color: var(--dark) !important;
+}
+
+/* Moldura interna decorativa */
+.border-inner {
+  position: relative;
+}
+
+.border-inner * {
+  position: relative;
+  z-index: 1;
+}
+
+.border-inner::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background: none;
+  border: 1px solid var(--light);
+  z-index: 0;
+}
+
+/* Botões quadrados */
+.btn-square {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-sm-square {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-lg-square {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 0;
+  border-radius: 0;
+  z-index: 99;
+}
+
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link {
+  font-family: 'Oswald', sans-serif;
+  padding: 30px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--light);
+  outline: none;
+  transition: .3s ease;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+  padding: 20px 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
+
+/* Hero — mantém sua imagem, mas o resto usa cores novas */
+.hero-header {
+  background: url(../img/hero.jpg) top right no-repeat;
+  background-size: cover;
+}
+
+/* Botão play (se usar vídeo) — mantém branco para contraste com fotos */
+.btn-play {
+  position: relative;
+  display: block;
+  box-sizing: content-box;
+  width: 16px;
+  height: 26px;
+  border-radius: 100%;
+  border: none;
+  outline: none !important;
+  padding: 18px 20px 20px 28px;
+  background: #FFFFFF;
+}
+
+.btn-play:before,
+.btn-play:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: #FFFFFF;
+  border-radius: 100%;
+}
+
+.btn-play:before {
+  animation: pulse-border 1500ms ease-out infinite;
+  z-index: 0;
+}
+
+.btn-play:after {
+  transition: all 200ms;
+  z-index: 1;
+}
+
+.btn-play span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  left: -1px;
+  border-left: 16px solid var(--primary);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Modal de vídeo */
+#videoModal .modal-dialog {
+  position: relative;
+  max-width: 800px;
+  margin: 60px auto 0 auto;
+}
+
+#videoModal .modal-body {
+  position: relative;
+  padding: 0;
+}
+
+#videoModal .close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: -30px;
+  z-index: 999;
+  font-size: 30px;
+  font-weight: normal;
+  color: var(--light);
+  background: var(--dark);
+  opacity: 1;
+}
+
+/* Títulos de seção (linhas decorativas) */
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 10px;
+  left: 50%;
+  bottom: 0;
+  margin-left: -30px;
+  background: var(--primary);
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 2px;
+  left: 50%;
+  bottom: 4px;
+  margin-left: -90px;
+  background: var(--primary);
+}
+
+/* Pano de fundo com sobreposição (Serviços/Contato) 
+   Substitui o cinza/pretão por marrom da marca com transparência. */
+.service::after,
+.contact::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: calc(100% - 45px);
+  top: 135px;
+  left: 0;
+  background:
+    linear-gradient(rgba(165, 110, 68, .90), rgba(165, 110, 68, .90)),
+    url(../img/service.jpg) center center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.contact::after {
+  background:
+    linear-gradient(rgba(165, 110, 68, .50), rgba(165, 110, 68, .50)),
+    url(../img/bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+/* Ofertas / blocos com foto */
+.bg-offer {
+  background:
+    linear-gradient(rgba(165, 110, 68, .90), rgba(165, 110, 68, .90)),
+    url(../img/offer.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+/* Equipe (efeito hover) */
+.team-item img {
+  transition: .5s;
+}
+
+.team-item:hover img {
+  transform: scale(1.1);
+  filter: blur(5px);
+}
+
+.team-item .team-overlay {
+  transition: .5s;
+  opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+  opacity: 1;
+}
+
+/* Depoimentos — dots com tons da paleta */
+.testimonial-carousel .owl-dots {
+  height: 45px;
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 2px;
+  width: 10px;
+  height: 25px;
+  background: var(--secondary);
+  /* antes #DDD */
+  transition: .3s ease;
+}
+
+.testimonial-carousel .owl-dot.active {
+  height: 45px;
+  background: var(--primary);
+}
+
+.testimonial-carousel .owl-item .testimonial-item {
+  opacity: .15;
+  transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+  opacity: 1;
+}
+
+/* Fundo global com overlay suave */
+.bg-img {
+  background:
+    linear-gradient(rgba(165, 110, 68, .50), rgba(165, 110, 68, .50)),
+    url(../img/bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+

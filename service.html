@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--
+  Documento HTML5 de uma landing page para confeitaria.
+  Foram adicionados comentários detalhados para explicar cada bloco,
+  além da tradução completa do conteúdo textual para pt-BR.
+-->
+<html lang="pt-BR">
+
+<head>
+    <!--
+    <meta charset> define a codificação do documento como UTF-8,
+    garantindo suporte a acentos e caracteres especiais.
+  -->
+    <meta charset="utf-8" />
+
+    <!--
+    <title> define o título mostrado na aba do navegador e em SEO.
+    Personalize com o nome da sua confeitaria (ex.: "Florido Doces").
+  -->
+    <title>Florido Doces</title>
+
+    <!--
+    Viewport responsivo para dispositivos móveis:
+    width=device-width faz o layout usar a largura do dispositivo;
+    initial-scale=1.0 define o nível de zoom inicial.
+  -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!--
+    Metatags de SEO (palavras-chave e descrição).
+    Ajuste para refletir seu negócio real.
+  -->
+    <meta content="Modelos HTML Gratuitos, Confeitaria, Bolos, Doces, Sobremesas" name="keywords" />
+    <meta content="Modelo gratuito de site para confeitaria com Bootstrap, responsivo e personalizável."
+        name="description" />
+
+    <!-- Favicon do site (ícone da aba). Substitua por seu arquivo em /img/favicon.ico -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!--
+    Google Fonts:
+    - Open Sans: texto corrido (400 normal, 600 semibold)
+    - Oswald: títulos (500/600/700)
+    - Pacifico: fonte cursiva usada no logotipo/heading
+    O preconnect ajuda a performance estabelecendo conexão antecipada.
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet" />
+
+    <!--
+    Bibliotecas de ícones:
+    - Font Awesome 5 (fa-*)
+    - Bootstrap Icons (bi-*)
+    Permitem inserir ícones vetoriais com classes CSS.
+  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!--
+    CSS de bibliotecas de terceiros:
+    - Owl Carousel: carrosséis responsivos
+  -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!--
+    Bootstrap (CSS) customizado: normalmente é o Bootstrap compilado
+    com pequenas alterações. Se usar o Bootstrap puro, garanta compatibilidade.
+  -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--
+    CSS principal do template: sobrescreve estilos do Bootstrap e define
+    a identidade visual da página (cores, espaçamentos, bg-img etc.).
+  -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ======================================
+       NAVBAR (menu de navegação responsivo)
+       ======================================
+       .navbar-expand-lg: expande menu a partir do breakpoint lg
+       .bg-dark .navbar-dark: esquema de cores
+       .shadow-sm: leve sombra
+       .py-3 / .py-lg-0 e .px-3 / .px-lg-0: espaçamentos responsivos
+  -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <!-- Marca alternativa visível apenas em telas pequenas (d-block d-lg-none) -->
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="m-0 text-uppercase text-white">
+                <i class="fa fa-birthday-cake fs-1 text-primary me-3"></i>CakeZone
+            </h1>
+        </a>
+
+        <!-- Botão hamburguer para colapsar/expandir o menu em mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Conteúdo colapsável do menu -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!--
+        .ms-auto: empurra itens para a direita em desktops
+        .mx-lg-auto: centraliza no layout grande
+        .py-0: remove padding vertical interno
+      -->
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Início</a>
+                <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
+                <a href="menu.html" class="nav-item nav-link">Cardápio &amp; Preços</a>
+                <a href="team.html" class="nav-item nav-link">Mestres Confeiteiros</a>
+
+                <!-- Dropdown "Páginas" com item ativo -->
+                <div class="nav-item dropdown">
+                    <!-- .active indica a seção atual -->
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item active">Nossos Serviços</a>
+                        <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-item nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+
+    <!-- ==================================
+       CABEÇALHO DA PÁGINA (hero interno)
+       ==================================
+       .bg-dark + .bg-img (definida no CSS) aplica imagem de fundo escurecida.
+       .p-5: padding generoso; .mb-5: margem inferior.
+  -->
+    <div class="container-fluid bg-dark bg-img p-5 mb-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- Título grande da página atual -->
+                <h1 class="display-4 text-uppercase text-white">Serviços</h1>
+                <!-- Trilho de navegação simples (breadcrumb reduzido) -->
+                <a href="index.html">Início</a>
+                <i class="far fa-square text-primary px-2"></i>
+                <a href="service.html">Serviços</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Cabeçalho -->
+
+    <!-- =======================
+       SEÇÃO: SERVIÇOS
+       =======================
+       .position-relative permite posicionamentos absolutos internos se necessário.
+       margin-top inline mantém espaçamento do topo (ajuste conforme design).
+  -->
+    <div class="container-fluid service position-relative px-5" style="margin-top: 90px;">
+        <div class="container">
+            <!-- .g-5: gap uniforme entre colunas/linhas -->
+            <div class="row g-5">
+                <!-- Card 1: Bolo de Aniversário -->
+                <div class="col-lg-4 col-md-6">
+                    <!--
+            .bg-primary: fundo na cor primária
+            .border-inner: estilo decorativo definido no style.css
+            .text-center .text-white: centraliza e deixa texto branco
+            .p-5: padding amplo para respirabilidade
+          -->
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bolo de Aniversário</h4>
+                        <p>
+                            Bolo fresquinho e personalizado para celebrar em grande estilo. Sabores, coberturas e
+                            decorações sob medida para o seu momento especial.
+                        </p>
+                        <!-- Link de ação: pode levar a uma página detalhada do serviço -->
+                        <a class="text-uppercase text-dark" href="">
+                            Saiba mais <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bolo de Casamento -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bolo de Casamento</h4>
+                        <p>
+                            Criações elegantes em múltiplos andares, com acabamento fino e sabores sofisticados para
+                            tornar o seu grande dia inesquecível.
+                        </p>
+                        <a class="text-uppercase text-dark" href="">
+                            Saiba mais <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bolo Personalizado -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bolo Personalizado</h4>
+                        <p>
+                            Tem um tema em mente? Criamos do seu jeito: formatos criativos, topos especiais e
+                            combinações únicas de massa e recheio.
+                        </p>
+                        <a class="text-uppercase text-dark" href="">
+                            Saiba mais <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Serviços -->
+
+    <!-- =======================
+       RODAPÉ
+       ======================= -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Erro ao carregar footer:", error));
+    </script>
+
+    <!-- =======================
+       BOTÃO "VOLTAR AO TOPO"
+       =======================
+       .back-to-top é geralmente estilizado em style.css para aparecer fixo.
+  -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- =======================
+       SCRIPTS JAVASCRIPT
+       =======================
+       Ordem recomendada:
+       1) jQuery (se o tema depende)
+       2) Bootstrap Bundle (inclui Popper para tooltips/dropdowns)
+       3) Bibliotecas auxiliares (easing, waypoints, counterup, owlcarousel)
+       4) main.js do template (inicializações e comportamentos customizados)
+  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--
+    Easing: funções de aceleração para animações suaves
+    Waypoints: detecção de scroll para disparar animações/contadores
+    CounterUp: anima contadores numéricos
+    Owl Carousel: carrosséis responsivos
+  -->
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!--
+    main.js: arquivo principal do tema onde, em geral, se inicializam
+    carrosséis, back-to-top, animações e outros componentes.
+  -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

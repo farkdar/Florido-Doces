@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--
+  Página "Sobre Nós" (About) do site de confeitaria.
+  Todo o conteúdo textual foi traduzido para pt-BR e
+  os comentários explicam a função de cada bloco/linha.
+-->
+<html lang="pt-BR">
+
+<head>
+    <!-- Codificação do documento -->
+    <meta charset="utf-8" />
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Florido Doces</title>
+
+    <!-- Viewport para layout responsivo em dispositivos móveis -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Metatags de SEO básicas (ajuste para o seu negócio real) -->
+    <meta content="Confeitaria, Bolos, Doces, Sobre nós, Modelos HTML Gratuitos" name="keywords" />
+    <meta content="Página 'Sobre Nós' de um template gratuito para confeitaria, responsivo e personalizável."
+        name="description" />
+
+    <!-- Favicon do site -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!--
+    Google Fonts:
+    - Open Sans para textos
+    - Oswald para títulos
+    - Pacifico para detalhes/branding
+    Preconnect melhora a performance ao antecipar conexões.
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bibliotecas de ícones: Font Awesome e Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- CSS de terceiros: Owl Carousel (se houver carrosséis nesta página/site) -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap (CSS) do tema -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS principal do template: identidade visual e utilitários customizados -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ======================================
+       NAVBAR — menu principal responsivo
+       ======================================
+       .navbar-expand-lg: expande o menu a partir de telas lg
+       .bg-dark .navbar-dark: esquema de cores
+  -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <!-- Marca alternativa visível apenas em mobile -->
+        <a href="index.html" class="navbar-brand d-block d-lg-none" aria-label="Ir para a página inicial">
+            <h1 class="m-0 text-uppercase text-white">
+                <i class="fa fa-birthday-cake fs-1 text-primary me-3" aria-hidden="true"></i>Florido Doces
+            </h1>
+        </a>
+
+        <!-- Botão hamburguer (abre/fecha o menu no mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Itens colapsáveis do menu -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Início</a>
+                <!-- .active marca a página atual -->
+                <a href="about.html" class="nav-item nav-link active" aria-current="page">Sobre Nós</a>
+                <a href="menu.html" class="nav-item nav-link">Cardápio &amp; Preços</a>
+                <a href="team.html" class="nav-item nav-link">Chefes</a>
+
+                <!-- Dropdown "Páginas" -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Nossos Serviços</a>
+                        <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-item nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+
+    <!-- ==================================
+       CABEÇALHO DA PÁGINA (hero interno)
+       ==================================
+       .bg-dark + .bg-img aplicam fundo escuro com imagem (ver style.css)
+  -->
+    <div class="container-fluid bg-dark bg-img p-5 mb-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- Título principal da página -->
+                <h1 class="display-4 text-uppercase text-white">Sobre Nós</h1>
+
+                <!-- Breadcrumb simples (trilho de navegação) -->
+                <a href="index.html">Início</a>
+                <i class="far fa-square text-primary px-2" aria-hidden="true"></i>
+                <a href="about.html" aria-current="page">Sobre</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Cabeçalho -->
+
+    <!-- =======================
+       SEÇÃO: SOBRE
+       =======================
+       Estrutura com imagem à esquerda e conteúdo à direita.
+  -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <!-- Título de seção centralizado -->
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Sobre Nós</h2>
+                <h1 class="display-4 text-uppercase">Bem-vindo à Florido Doces</h1>
+            </div>
+
+            <div class="row gx-5">
+                <!-- Coluna da imagem (altura mínima para manter proporção do layout) -->
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <!--
+              Imagem de capa com posicionamento absoluto para preencher o container.
+              object-fit: cover garante recorte adequado sem distorcer.
+            -->
+                        <img class="position-absolute w-100 h-100" src="img/about.jpg"
+                            alt="Equipe da confeitaria preparando bolos" style="object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Coluna de texto/ícones -->
+                <div class="col-lg-6 pb-5">
+                    <!-- Subtítulo introdutório (substitua por texto real da sua marca) -->
+                    <h4 class="mb-4">
+                        Apaixonados por confeitaria, unimos técnica e criatividade para transformar momentos em memórias
+                        deliciosas.
+
+                    </h4>
+
+                    <!-- Parágrafo descritivo (adicione sua história/propósito) -->
+                    <p class="mb-5">
+                        A Florido Doces leva o nosso sobrenome — Florido — e o carinho da família em cada receita.<br>
+                        Trabalhamos com ingredientes selecionados e receitas autorais para oferecer doces que encantam
+                        pelo sabor e pela apresentação. Somos especializados em trufas, docinhos de festa e opções para
+                        datas comemorativas. Cada detalhe é pensado para celebrar suas ocasiões com
+                        qualidade e chocolates nobres.
+                    </p>
+
+                    <!-- Destaques com ícones (ex.: saúde/qualidade e premiações) -->
+                    <div class="row g-5">
+                        <!-- Destaque 1 -->
+                        <div class="col-sm-6">
+                            <!-- Bloco de ícone em caixa quadrada -->
+                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4"
+                                style="width: 90px; height: 90px;">
+                                <i class="fa fa-heartbeat fa-2x text-white" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="text-uppercase">100% Saudável</h4>
+                            <p class="mb-0">
+                                Receitas equilibradas e ingredientes de alta qualidade para oferecer sabor e bem-estar
+                                em cada doce.
+                            </p>
+                        </div>
+
+                        <!-- Destaque 2 -->
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4"
+                                style="width: 90px; height: 90px;">
+                                <i class="fa fa-award fa-2x text-white" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="text-uppercase">Garantia de Frescor</h4>
+                            <p class="mb-0">
+                                Produção sob demanda para manter sabor e textura impecáveis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim coluna de texto -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Sobre -->
+
+
+        <!-- =======================
+       RODAPÉ
+       ======================= -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Erro ao carregar footer:", error));
+    </script>
+
+
+    <!-- =======================
+       BOTÃO "VOLTAR AO TOPO"
+       ======================= -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <!-- =======================
+       SCRIPTS JAVASCRIPT
+       =======================
+       Ordem: jQuery -> Bootstrap -> libs -> main.js
+       Certifique-se de que as versões são compatíveis.
+  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bibliotecas auxiliares usadas no tema (scroll, animações, contadores, carrossel) -->
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!--
+    main.js: inicializa componentes (ex.: botão back-to-top, contadores com
+    [data-toggle="counter-up"], carrosséis, efeitos de rolagem etc.).
+  -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

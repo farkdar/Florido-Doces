@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><!-- Define o idioma principal (melhora SEO e acessibilidade) -->
+
+<head>
+    <meta charset="utf-8"><!-- Suporte a acentuação e caracteres especiais -->
+    <title>Florido Doces</title><!-- Título da aba -->
+
+    <!-- Viewport: layout responsivo em dispositivos móveis -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Metadados de SEO -->
+    <meta content="Modelos HTML Gratuitos, Confeitaria, Bolos, Cardápio, Preços" name="keywords">
+    <meta content="Modelo HTML gratuito e responsivo para confeitaria com seção de cardápio e preços."
+        name="description">
+
+    <!-- Favicon (ícone da aba) -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts: pré-conexões para performance + importação das famílias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Evita latência na conexão -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importa Open Sans (texto), Oswald (títulos) e Pacifico (logotipo/acentos) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <!-- Pacotes de ícones: Font Awesome (fa-*) e Bootstrap Icons (bi-*) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Biblioteca Owl Carousel (carrosséis) -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap (estilos principais) -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos do template (sobrescrevem/ajustam Bootstrap) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR (menu de navegação) ===================== -->
+    <!-- navbar-expand-lg: vira menu “hambúrguer” abaixo de lg -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <!-- Marca visível apenas no mobile -->
+        <a href="index.html" class="navbar-brand d-block d-lg-none" aria-label="Ir para Início">
+            <h1 class="m-0 text-uppercase text-white">
+                <i class="fa fa-birthday-cake fs-1 text-primary me-3" aria-hidden="true"></i>CakeZone
+            </h1>
+        </a>
+        <!-- Botão de colapso (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Área colapsável com os links -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- ms-auto: empurra para direita; mx-lg-auto centraliza em telas grandes -->
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Início</a>
+                <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
+                <a href="menu.html" class="nav-item nav-link active">Cardápio & Preços</a><!-- active = página atual -->
+                <a href="team.html" class="nav-item nav-link">Chefes</a>
+                <!-- Dropdown "Páginas" -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Nossos Serviços</a>
+                        <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- ===================== /NAVBAR ===================== -->
+
+
+    <!-- ===================== CABEÇALHO DA PÁGINA (header interno) ===================== -->
+    <!-- bg-dark bg-img: fundo escuro com imagem definida no CSS; p-5/mb-5 ajustam espaçamentos -->
+    <div class="container-fluid bg-dark bg-img p-5 mb-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- Título principal da página (contexto atual) -->
+                <h1 class="display-4 text-uppercase text-white">Cardápio & Preços</h1>
+                <!-- Breadcumbs simples (links meramente ilustrativos) -->
+                <a href="">Início</a>
+                <i class="far fa-square text-primary px-2" aria-hidden="true"></i>
+                <a href="">Cardápio & Preços</a>
+            </div>
+        </div>
+    </div>
+    <!-- ===================== /CABEÇALHO DA PÁGINA ===================== -->
+
+
+    <!-- ===================== PRODUTOS / CARDÁPIO COM ABAS ===================== -->
+    <div class="container-fluid about py-5"><!-- Classe "about" aqui é apenas de tema/estilo -->
+        <div class="container">
+            <!-- Título da seção -->
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Cardápio & Preços</h2>
+                <h1 class="display-4 text-uppercase">Explore Nossos Bolos</h1>
+            </div>
+
+            <!-- Abas (nav-pills) para filtrar categorias: Birthday, Wedding, Custom -->
+            <div class="tab-class text-center">
+                <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase border-inner p-4 mb-5"
+                    role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-white active" data-bs-toggle="pill" href="#tab-1" role="tab"
+                            aria-selected="true">Festas</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#tab-2" role="tab"
+                            aria-selected="false">Datas Comemorativas</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#tab-3" role="tab"
+                            aria-selected="false">Presentes</a>
+                    </li>
+                </ul>
+
+                <!-- Conteúdo das abas: cada .tab-pane corresponde a uma categoria -->
+                <!-- Conteúdo das abas -->
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active" role="tabpanel">
+                        <div class="menu-pane" data-key="festas"></div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0" role="tabpanel">
+                        <div class="menu-pane" data-key="comemorativas"></div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0" role="tabpanel">
+                        <div class="menu-pane" data-key="presentes"></div>
+                    </div>
+                </div>
+
+                <!-- Inclua este script DEPOIS do Bootstrap -->
+                <script src="js/menu-render.js"></script>
+
+            </div><!-- /tab-class -->
+        </div>
+    </div>
+    <!-- ===================== /PRODUTOS ===================== -->
+
+
+    <!-- ===================== FAIXA DE OFERTA (call-to-action) ===================== -->
+    <!-- bg-offer: fundo especial definido no CSS; my/py controlam margens e paddings -->
+    <div class="container-fluid bg-offer my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <div class="section-title position-relative text-center mx-auto mb-4 pb-3"
+                        style="max-width: 600px;">
+                        <h2 class="text-primary font-secondary">Combo Especial</h2>
+                        <h1 class="display-4 text-uppercase text-white">Bolos Super Crocantes</h1>
+                    </div>
+                    <p class="text-white mb-4">
+                        Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor
+                        justo ipsum duo rebum sea.
+                        Eos vero eos vero ea et dolore eirmod et. Dolores diam duo lorem. Elitr ut dolores magna sit.
+                        Sea dolore sed et.
+                    </p>
+                    <a href="" class="btn btn-primary border-inner py-3 px-5 me-3">Compre agora</a>
+                    <a href="" class="btn btn-dark border-inner py-3 px-5">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===================== /OFERTA ===================== -->
+
+
+    <!-- =======================
+       RODAPÉ
+       ======================= -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Erro ao carregar footer:", error));
+    </script>
+
+
+    <!-- Botão "Voltar ao Topo" (visibilidade e animação controladas via CSS/JS) -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
+
+
+    <!-- ===================== SCRIPTS (ordem importa) ===================== -->
+    <!-- jQuery: dependência de plugins como CounterUp e Owl Carousel -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap Bundle (inclui Popper para tooltips/dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins do template -->
+    <script src="lib/easing/easing.min.js"></script><!-- Suavização de animações -->
+    <script src="lib/waypoints/waypoints.min.js"></script><!-- Dispara eventos quando elementos entram na viewport -->
+    <script src="lib/counterup/counterup.min.js"></script><!-- Animação de contadores (data-toggle="counter-up") -->
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script><!-- Carrosséis (depoimentos, etc.) -->
+    <!-- Script principal do template: inicializa plugins, controla back-to-top, etc. -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

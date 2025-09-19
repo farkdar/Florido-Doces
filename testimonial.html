@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--
+  Documento HTML5 da seção "Depoimentos" (Testimonial) do site de confeitaria.
+  Conteúdo textual traduzido para pt-BR e comentários adicionados para explicar cada parte.
+-->
+<html lang="pt-BR">
+
+<head>
+    <!-- Codificação: UTF-8 para suportar acentos -->
+    <meta charset="utf-8" />
+
+    <!-- Título da aba/navegador -->
+    <title>Florido Doces</title>
+
+    <!-- Viewport responsivo para dispositivos móveis -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Metadados de SEO (ajuste para o seu negócio real) -->
+    <meta content="Modelos HTML Gratuitos, Confeitaria, Depoimentos, Bolos, Doces" name="keywords" />
+    <meta content="Página de depoimentos de clientes de um template gratuito para confeitaria." name="description" />
+
+    <!-- Favicon (substitua pelo seu arquivo) -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Fonts (pré-conexão melhora performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bibliotecas de ícones: Font Awesome e Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- CSS de bibliotecas: Owl Carousel (carrossel de depoimentos) -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap (CSS) — certifique-se de compatibilidade com seu tema -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS principal do template (cores, tipografia, utilitários do tema) -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ======================================
+       NAVBAR — menu de navegação responsivo
+       ====================================== -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <!-- Marca alternativa para mobile -->
+        <a href="index.html" class="navbar-brand d-block d-lg-none" aria-label="Ir para a página inicial">
+            <h1 class="m-0 text-uppercase text-white">
+                <i class="fa fa-birthday-cake fs-1 text-primary me-3" aria-hidden="true"></i>Florido Doces
+            </h1>
+        </a>
+
+        <!-- Botão hamburguer (abre/fecha o menu em telas pequenas) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Conteúdo colapsável da navbar -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Início</a>
+                <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
+                <a href="menu.html" class="nav-item nav-link">Cardápio &amp; Preços</a>
+                <a href="team.html" class="nav-item nav-link">Mestres Confeiteiros</a>
+
+                <!-- Dropdown de páginas; .active indica seção atual -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                        aria-expanded="false">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Nossos Serviços</a>
+                        <a href="testimonial.html" class="dropdown-item active" aria-current="page">Depoimentos</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-item nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+
+    <!-- ==================================
+       CABEÇALHO (hero interno da página)
+       ================================== -->
+    <div class="container-fluid bg-dark bg-img p-5 mb-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- Título da página -->
+                <h1 class="display-4 text-uppercase text-white">Depoimentos</h1>
+
+                <!-- Breadcrumb simplificado -->
+                <a href="index.html">Início</a>
+                <i class="far fa-square text-primary px-2" aria-hidden="true"></i>
+                <a href="testimonial.html" aria-current="page">Depoimentos</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Cabeçalho -->
+
+    <!-- =======================
+       SEÇÃO: DEPOIMENTOS
+       =======================
+       .owl-carousel testimonial-carousel: inicializada via JS (main.js)
+  -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <!-- Título de seção centralizado -->
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Depoimentos</h2>
+                <h1 class="display-4 text-uppercase">O que nossos clientes dizem!</h1>
+            </div>
+
+            <!-- Carrossel de depoimentos (cada .testimonial-item é um slide) -->
+            <div class="owl-carousel testimonial-carousel" aria-label="Carrossel de depoimentos">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <!-- Cabeçalho do depoimento: avatar + nome/profissão -->
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- Imagem do cliente: ajuste alt e caminho da imagem -->
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg" alt="Cliente 1"
+                            style="width: 60px; height: 60px;" />
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">Nome do Cliente</h4>
+                            <span>Profissão</span>
+                        </div>
+                    </div>
+                    <!-- Texto do depoimento -->
+                    <p class="mb-0">
+                        Atendimento excelente e bolos incríveis! A apresentação e o sabor superaram minhas expectativas.
+                    </p>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg" alt="Cliente 2"
+                            style="width: 60px; height: 60px;" />
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">Nome do Cliente</h4>
+                            <span>Profissão</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">
+                        Encomendei um bolo personalizado e ficou perfeito! Entrega no horário e sabor impecável.
+                    </p>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg" alt="Cliente 3"
+                            style="width: 60px; height: 60px;" />
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">Nome do Cliente</h4>
+                            <span>Profissão</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">
+                        Ótimo custo-benefício. Recomendo para aniversários e eventos — qualidade e capricho em cada
+                        detalhe.
+                    </p>
+                </div>
+
+                <!-- Depoimento 4 -->
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg" alt="Cliente 4"
+                            style="width: 60px; height: 60px;" />
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">Nome do Cliente</h4>
+                            <span>Profissão</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">
+                        O bolo de casamento ficou lindo e delicioso. A equipe foi super atenciosa do início ao fim.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Depoimentos -->
+
+    <!-- =======================
+       RODAPÉ
+       ======================= -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Erro ao carregar footer:", error));
+    </script>
+
+    <!-- =======================
+       BOTÃO "VOLTAR AO TOPO"
+       ======================= -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <!-- =======================
+       SCRIPTS JAVASCRIPT
+       =======================
+       Ordem: jQuery -> Bootstrap -> libs -> main.js
+  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bibliotecas auxiliares usadas pelo tema -->
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!--
+    main.js: inicializações do carrossel (.testimonial-carousel), botão back-to-top,
+    animações de scroll etc. Certifique-se de que os seletores coincidem com o HTML.
+  -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

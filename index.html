@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><!-- Define idioma principal do documento para PT-BR (melhora SEO e acessibilidade) -->
+
+<head>
+    <meta charset="utf-8"><!-- Codificação UTF-8 para suportar acentuação -->
+    <title>Florido Doces</title><!-- Título exibido na aba do navegador -->
+
+    <!-- Viewport para design responsivo em dispositivos móveis -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Metadados de SEO: palavras-chave e descrição do site -->
+    <meta content="Modelos HTML Gratuitos, Confeitaria, Bolos, Doces, Padaria" name="keywords">
+    <meta content="Modelo HTML gratuito e responsivo para confeitaria/loja de bolos com Bootstrap." name="description">
+
+    <!-- Favicon (ícone da aba do navegador) -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts: pré-conexão para menor latência e importação das famílias tipográficas -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Melhora performance ao antecipar handshake -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Permite carregamento cross-origin das fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Folhas de estilo de ícones: Font Awesome (fa-*) e Bootstrap Icons (bi-*) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Estilo da biblioteca Owl Carousel (usada no carrossel de depoimentos) -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap (CSS principal do framework) - pode haver personalizações no arquivo -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS do template (sobrescreve e complementa o Bootstrap) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===================== NAVBAR (menu de navegação fixo no topo) ===================== -->
+    <!-- navbar-expand-lg: expande a navegação horizontal a partir de lg; antes disso vira menu colapsável -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <!-- Marca/Logo visível apenas no mobile (d-block d-lg-none) -->
+        <a href="index.html" class="navbar-brand d-block d-lg-none" aria-label="Ir para Início">
+            <h1 class="m-0 text-uppercase text-white">
+                </i>Florido Doces
+            </h1>
+        </a>
+
+        <!-- Botão hamburguer para abrir/fechar o menu no mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Área colapsável do menu: links de navegação -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- ms-auto: empurra itens para a direita; mx-lg-auto centraliza no desktop -->
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Início</a><!-- active = página atual -->
+                <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
+                <a href="menu.html" class="nav-item nav-link">Cardápio & Preços</a>
+                <a href="team.html" class="nav-item nav-link">Chefes</a>
+                <!-- Dropdown com outras páginas -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Nossos Serviços</a>
+                        <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- ===================== /NAVBAR ===================== -->
+
+
+    <!-- ===================== HERO HEADER (capa/hero da home) ===================== -->
+    <!-- bg-primary + hero-header são estilos do template que definem cor, imagem e espaçamento -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <!-- justify-content-start: alinha conteúdo à esquerda em telas grandes -->
+            <div class="row justify-content-start">
+                <!-- Em lg ocupa 8 colunas; textos centralizados no mobile e à esquerda no desktop -->
+                <div class="col-lg-8 text-center text-lg-start">
+                    <!-- Subtítulo fino (usa a segunda família de fonte configurada) -->
+                    <h1 class="font-secondary text-primary mb-4">Deliciosamente Artesanais</h1>
+                    <!-- Título principal gigante -->
+                    <h1 class="display-1 text-uppercase text-white mb-4 text-center text-lg-start">
+                        <span class="visually-hidden">Florido Doces</span>
+                        <img src="img/VARIAÇÃO CORES_3.png" alt="Florido Doces"
+                            class="brand-logo d-block mx-auto mx-lg-0">
+                    </h1>
+                    <!-- Slogan -->
+                    <h1 class="text-uppercase text-white">Trufas e docinhos para<br>todas as comemorações</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===================== /HERO HEADER ===================== -->
+
+
+    <!-- ===================== MODAL DE VÍDEO (YouTube em modal Bootstrap) ===================== -->
+    <!-- .fade para animação; tabindex -1 para não focável por padrão -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><!-- Tamanho padrão do modal -->
+            <div class="modal-content rounded-0"><!-- rounded-0 remove cantos arredondados (estilo do template) -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Vídeo do YouTube</h5>
+                    <!-- Botão de fechar com ícone X padrão do Bootstrap 5 -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Wrapper responsivo 16:9 para o iframe -->
+                    <div class="ratio ratio-16x9">
+                        <!-- O src é setado dinamicamente via JS (main.js) usando o data-src do botão .btn-play -->
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                            allowscriptaccess="always" allow="autoplay" title="Reprodutor de Vídeo"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===================== /MODAL DE VÍDEO ===================== -->
+
+
+    <!-- ===================== SOBRE (About) ===================== -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <!-- Título centralizado com largura máxima para não ficar muito longo -->
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Sobre Nós</h2>
+            </div>
+
+            <div class="row gx-5">
+                <!-- Coluna imagem: define altura mínima para manter layout -->
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <!-- position-absolute + w-100 h-100 + object-fit:cover = imagem preenche o container -->
+                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;"
+                            alt="Confeitaria Florido Doces">
+                    </div>
+                </div>
+
+                <!-- Coluna texto: descrição e destaques -->
+                <div class="col-lg-6 pb-5">
+                    <!-- Texto de destaque (subtítulo) -->
+                    <h4 class="mb-4">
+                        Apaixonados por confeitaria, unimos técnica e criatividade para transformar momentos em memórias
+                        deliciosas.
+                    </h4>
+                    <!-- Parágrafo descritivo (placeholder do template) -->
+                    <p class="mb-5">
+                        A Florido Doces leva o nosso sobrenome — Florido — e o carinho da família em cada receita.<br>
+                        Trabalhamos com ingredientes selecionados e receitas autorais para oferecer doces que encantam
+                        pelo sabor e pela apresentação. Somos especializados em trufas, docinhos de festa e opções para
+                        datas comemorativas. Cada detalhe é pensado para celebrar suas ocasiões com
+                        qualidade e chocolates nobres.
+                    </p>
+
+                    <!-- Destaques em duas colunas (ícone + título + texto) -->
+                    <div class="row g-5">
+                        <div class="col-sm-6">
+                            <!-- Bloco do ícone em caixa quadrada -->
+                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4"
+                                style="width: 90px; height: 90px;">
+                                <i class="fa fa-heartbeat fa-2x text-white" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="text-uppercase">100% Saudável</h4>
+                            <p class="mb-0">Receitas equilibradas e ingredientes de alta qualidade para oferecer sabor e
+                                bem-estar em cada doce.</p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4"
+                                style="width: 90px; height: 90px;">
+                                <i class="fa fa-award fa-2x text-white" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="text-uppercase">Garantia de Frescor</h4>
+                            <p class="mb-0">Produção sob demanda para manter sabor e textura impecáveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div>
+    </div>
+    <!-- ===================== /SOBRE ===================== -->
+
+
+
+    <!-- ===================== PRODUTOS / CARDÁPIO COM ABAS ===================== -->
+    <div class="container-fluid about py-5"><!-- "about" aqui é apenas uma classe de tema do template -->
+        <div class="container">
+            <!-- Título da seção -->
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Cardápio & Preços</h2>
+                <h1 class="display-4 text-uppercase">Explore Nossos Doces</h1>
+            </div>
+
+            <!-- Conjunto de abas (pills) para filtrar categorias de bolos -->
+            <div class="tab-class text-center">
+                <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase border-inner p-4 mb-5"
+                    role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-white active" data-bs-toggle="pill" href="#tab-1" role="tab"
+                            aria-selected="true">Festas</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#tab-2" role="tab"
+                            aria-selected="false">Datas Comemorativas</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#tab-3" role="tab"
+                            aria-selected="false">Presentes</a>
+                    </li>
+                </ul>
+
+                <!-- Conteúdo das abas: cada .tab-pane corresponde a uma categoria -->
+                <!-- Conteúdo das abas -->
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active" role="tabpanel">
+                        <div class="menu-pane" data-key="festas"></div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0" role="tabpanel">
+                        <div class="menu-pane" data-key="comemorativas"></div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0" role="tabpanel">
+                        <div class="menu-pane" data-key="presentes"></div>
+                    </div>
+                </div>
+
+                <!-- Inclua este script DEPOIS do Bootstrap -->
+                <script src="js/menu-render.js"></script>
+
+            </div><!-- /tab-class -->
+        </div>
+    </div>
+    <!-- ===================== /PRODUTOS ===================== -->
+
+
+    <!-- ===================== SERVIÇOS / CHAMADA PROMOCIONAL ===================== -->
+    <!-- position-relative permite posicionamentos absolutos internos; margin-bottom ajusta sobreposição com seções seguintes -->
+    <div class="container-fluid service position-relative px-5 mt-5" style="margin-bottom: 135px;">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Bloco de serviço: Aniversário -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bolo de Aniversário</h4>
+                        <p>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet
+                            kasd lorem dolor ipsum</p>
+                        <a class="text-uppercase text-dark" href="">Saiba mais <i class="bi bi-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Bloco de serviço: Casamento -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bolo de Casamento</h4>
+                        <p>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet
+                            kasd lorem dolor ipsum</p>
+                        <a class="text-uppercase text-dark" href="">Saiba mais <i class="bi bi-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Bloco de serviço: Personalizado -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bolo Personalizado</h4>
+                        <p>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet
+                            kasd lorem dolor ipsum</p>
+                        <a class="text-uppercase text-dark" href="">Saiba mais <i class="bi bi-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ===================== /SERVIÇOS ===================== -->
+
+
+    <!-- ===================== EQUIPE (cards de chefs) ===================== -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <!-- Título da seção -->
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Membros do Time</h2>
+                <h1 class="display-4 text-uppercase">Nossas Chefes</h1>
+            </div>
+
+            <div class="row g-5 justify-content-center">
+                <!-- Card Chef 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-1.png" alt="Foto do chefe 1">
+                            <!-- Overlay com redes sociais (mostrado no hover via CSS) -->
+                            <div
+                                class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+                                <!-- único botão do Instagram -->
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
+                                        href="https://instagram.com/duda_florido/" target="_blank" rel="noopener"
+                                        aria-label="Instagram">
+                                        <i class="fab fa-instagram fw-normal"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="bg-dark border-inner text-center p-4">
+                            <h4 class="text-uppercase text-primary">Eduarda Florido</h4>
+                            <p class="text-white m-0">Sous-Chef Pâtissier</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Chef 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-2.png" alt="Foto do chefe 2">
+                            <div
+                                class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+                                <!-- único botão do Instagram -->
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
+                                        href="https://instagram.com/izaa_florido/" target="_blank" rel="noopener"
+                                        aria-label="Instagram">
+                                        <i class="fab fa-instagram fw-normal"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="bg-dark border-inner text-center p-4">
+                            <h4 class="text-uppercase text-primary">Izabela Florido</h4>
+                            <p class="text-white m-0">Chef Pâtissier</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div>
+    </div>
+    <!-- ===================== /EQUIPE ===================== -->
+
+
+    <!-- ===================== OFERTA/CHAMADA (faixa com fundo destacado) ===================== -->
+    <!-- bg-offer define imagem/gradiente via CSS; my-5/py-5 espaçamentos -->
+    <div class="container-fluid bg-offer my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <div class="section-title position-relative text-center mx-auto mb-4 pb-3"
+                        style="max-width: 600px;">
+                        <h2 class="text-primary font-secondary">Combo Especial</h2>
+                        <h1 class="display-4 text-uppercase text-white">Bolos Super Crocantes</h1>
+                    </div>
+                    <p class="text-white mb-4">
+                        Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor
+                        justo ipsum duo rebum sea.
+                        Eos vero eos vero ea et dolore eirmod et. Dolores diam duo lorem. Elitr ut dolores magna sit.
+                        Sea dolore sed et.
+                    </p>
+                    <!-- CTAs: “Comprar agora” e “Saiba mais” -->
+                    <a href="" class="btn btn-primary border-inner py-3 px-5 me-3">Comprar agora</a>
+                    <a href="" class="btn btn-dark border-inner py-3 px-5">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===================== /OFERTA ===================== -->
+
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Erro ao carregar footer:", error));
+    </script>
+
+
+
+    <!-- Botão “Voltar ao Topo” fixo (visível quando rola a página, controlado por JS/CSS) -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
+
+
+    <!-- ===================== SCRIPTS (ordem importa) ===================== -->
+    <!-- jQuery (dependência de algumas libs como counterup, owlcarousel) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap JS (inclui Popper interno para tooltips/dropdowns no bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Inclua tabela de produtos -->
+    <script src="js/menu-render.js"></script>
+
+    <!-- Plugins usados no template -->
+    <script src="lib/easing/easing.min.js"></script><!-- Suavização de animações/scroll -->
+    <script src="lib/waypoints/waypoints.min.js"></script><!-- Detecta quando elementos entram na viewport -->
+    <script src="lib/counterup/counterup.min.js"></script><!-- Anima números (counters) -->
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script><!-- Carrossel de depoimentos -->
+
+    <!-- Script principal do template:
+         - Inicializa carrosséis (Owl)
+         - Controla o botão back-to-top
+         - Ativa o counterup nos elementos [data-toggle="counter-up"]
+         - Injeta a URL do YouTube no iframe ao abrir o modal (#videoModal) e limpa ao fechar -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

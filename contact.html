@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--
+  Página "Contato" do site de confeitaria.
+  Todo o conteúdo textual foi traduzido para pt-BR
+  e os comentários explicam a função de cada bloco/linha.
+-->
+<html lang="pt-BR">
+
+<head>
+    <!-- Codificação do documento -->
+    <meta charset="utf-8" />
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Florido Doces</title>
+
+    <!-- Viewport para layout responsivo em dispositivos móveis -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Metatags de SEO básicas (ajuste para o seu negócio real) -->
+    <meta content="Confeitaria, Bolos, Doces, Contato, Modelos HTML Gratuitos" name="keywords" />
+    <meta content="Página de contato de um template gratuito para confeitaria, responsivo e personalizável."
+        name="description" />
+
+    <!-- Favicon do site -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!--
+    Google Fonts:
+    - Open Sans para textos
+    - Oswald para títulos
+    - Pacifico para detalhes/branding
+    Preconnect melhora a performance ao antecipar conexões.
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bibliotecas de ícones: Font Awesome e Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- CSS de terceiros: Owl Carousel (caso o tema use) -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap (CSS) do tema -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS principal do template: identidade visual e utilitários customizados -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ======================================
+       NAVBAR — menu principal responsivo
+       ======================================
+       .navbar-expand-lg: expande o menu a partir de telas lg
+       .bg-dark .navbar-dark: esquema de cores
+  -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <!-- Marca alternativa visível apenas em mobile -->
+        <a href="index.html" class="navbar-brand d-block d-lg-none" aria-label="Ir para a página inicial">
+            <h1 class="m-0 text-uppercase text-white">
+                <i class="fa fa-birthday-cake fs-1 text-primary me-3" aria-hidden="true"></i>Florido Doces
+            </h1>
+        </a>
+
+        <!-- Botão hamburguer (abre/fecha o menu no mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Itens colapsáveis do menu -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Início</a>
+                <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
+                <a href="menu.html" class="nav-item nav-link">Cardápio &amp; Preços</a>
+                <a href="team.html" class="nav-item nav-link">Mestres Confeiteiros</a>
+
+                <!-- Dropdown "Páginas" -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Nossos Serviços</a>
+                        <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
+                    </div>
+                </div>
+
+                <!-- .active marca a página atual -->
+                <a href="contact.html" class="nav-item nav-link active" aria-current="page">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+
+    <!-- ==================================
+       CABEÇALHO DA PÁGINA (hero interno)
+       ==================================
+       .bg-dark + .bg-img aplicam fundo escuro com imagem (ver style.css)
+  -->
+    <div class="container-fluid bg-dark bg-img p-5 mb-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- Título principal da página -->
+                <h1 class="display-4 text-uppercase text-white">Contato</h1>
+
+                <!-- Breadcrumb simples (trilho de navegação) -->
+                <a href="index.html">Início</a>
+                <i class="far fa-square text-primary px-2" aria-hidden="true"></i>
+                <a href="contact.html" aria-current="page">Contato</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Cabeçalho -->
+
+    <!-- =======================
+       SEÇÃO: CONTATO
+       =======================
+       Três cards de informação (endereço, e-mail, telefone) + formulário.
+  -->
+    <div class="container-fluid contact position-relative px-5" style="margin-top: 90px;">
+        <div class="container">
+            <!-- Cards de contato -->
+            <div class="row g-5 mb-5">
+                <!-- Card: Endereço -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <i class="bi bi-geo-alt fs-1 text-white" aria-hidden="true"></i>
+                        <h6 class="text-uppercase my-2">Nosso Endereço</h6>
+                        <span>Rua Exemplo, 123 — Cidade, Brasil</span>
+                    </div>
+                </div>
+
+                <!-- Card: E-mail -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <i class="bi bi-envelope-open fs-1 text-white" aria-hidden="true"></i>
+                        <h6 class="text-uppercase my-2">Envie um e-mail</h6>
+                        <span>floridodoces@gmail.com</span>
+                    </div>
+                </div>
+
+                <!-- Card: Telefone -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <i class="bi bi-phone-vibrate fs-1 text-white" aria-hidden="true"></i>
+                        <h6 class="text-uppercase my-2">Ligue para nós</h6>
+                        <span>+55 (00) 1234-56789</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário de contato centralizado -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <!--
+            IMPORTANTE:
+            - Defina o atributo action="" para o endpoint do seu backend (ex.: /contato).
+            - Use method="post" para enviar os dados e name="" em cada campo.
+            - Para acessibilidade, rótulos <label> podem ser associados via for/id.
+          -->
+                    <form action="" method="post" novalidate>
+                        <div class="row g-3">
+                            <!-- Nome -->
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control bg-light border-0 px-4" name="nome" id="nome"
+                                    placeholder="Seu nome" aria-label="Seu nome" style="height: 55px;" required>
+                            </div>
+
+                            <!-- E-mail -->
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control bg-light border-0 px-4" name="email" id="email"
+                                    placeholder="Seu e-mail" aria-label="Seu e-mail" style="height: 55px;" required>
+                            </div>
+
+                            <!-- Assunto -->
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control bg-light border-0 px-4" name="assunto"
+                                    id="assunto" placeholder="Assunto" aria-label="Assunto" style="height: 55px;">
+                            </div>
+
+                            <!-- Mensagem -->
+                            <div class="col-sm-12">
+                                <textarea class="form-control bg-light border-0 px-4 py-3" name="mensagem" id="mensagem"
+                                    rows="4" placeholder="Mensagem" aria-label="Mensagem"></textarea>
+                            </div>
+
+                            <!-- Botão enviar -->
+                            <div class="col-sm-12">
+                                <button class="btn btn-primary border-inner w-100 py-3" type="submit">
+                                    Enviar mensagem
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Dica: valide no front (JS) e no backend; exiba mensagens de sucesso/erro. -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Contato -->
+
+    <!-- =======================
+       RODAPÉ
+       ======================= -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Erro ao carregar footer:", error));
+    </script>
+
+    <!-- =======================
+       BOTÃO "VOLTAR AO TOPO"
+       ======================= -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <!-- =======================
+       SCRIPTS JAVASCRIPT
+       =======================
+       Ordem: jQuery -> Bootstrap -> libs -> main.js
+       Certifique-se de que as versões são compatíveis.
+  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bibliotecas auxiliares usadas no tema (scroll, animações, contadores, carrossel) -->
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!--
+    main.js: inicializa componentes (ex.: botão back-to-top,
+    contadores com [data-toggle="counter-up"], carrosséis,
+    efeitos de rolagem etc.). Ajuste seletores conforme seu HTML.
+  -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

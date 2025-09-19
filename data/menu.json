@@ -1,0 +1,32 @@
+{
+  "festas": [
+    {
+      "img": "img/festas/festas-cento-beijinho.webp",
+      "titulo": "Beijinho",
+      "preco": "R$ 140,00",
+      "desc": "Um cento de beijinho cremoso confeito com coco ralado."
+    },
+    {
+      "img": "img/festas/festas-cento-brigadeiro.webp",
+      "titulo": "Brigadeiro",
+      "preco": "R$ 140,00",
+      "desc": "Um cento de brigadeiro de chocolate nobre com granulado Melken."
+    }
+  ],
+  "comemorativas": [
+    {
+      "img": "img/comemorativas/pascoa/ovo-tradicional.jpg",
+      "titulo": "Ovo de Pascoa Tradicional",
+      "preco": "R$ 40,00",
+      "desc": "Ovo de páscoa tradicional com surpresa dentro (batom e tortuguita).<br>Sabores: Meio amargo, Branco e Duo."
+    }
+  ],
+  "presentes": [
+    {
+      "img": "img/presentes/presente-caixa-quatro-doces.webp",
+      "titulo": "Kits Temáticos",
+      "preco": "R$ 12,00",
+      "desc": "Caixa com 4 doces.<br>Sabores: Brigadeiro, Beijinho, Ninho e Brigadeiro Branco."
+    }
+  ]
+}
