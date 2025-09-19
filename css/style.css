@@ -422,29 +422,35 @@ h6,
 }
 
 
-/* Desktop / padrão */
+/* imagem padrão */
 .product-thumb {
   width: 170px;
   height: 170px;
   object-fit: cover;
-  /* mantém quadrada sem distorcer */
   border-radius: .5rem;
   /* opcional */
 }
 
-/* Celular */
+/* garante que no mobile continue lado a lado */
 @media (max-width: 576px) {
+  .item-card {
+    flex-direction: row;
+    /* mantém imagem ao lado do texto */
+    align-items: flex-start;
+  }
+
   .product-thumb {
     width: 100px;
+    /* menor para caber bem no mobile */
     height: 100px;
   }
 
-  .text-uppercase {
-    font-size: .95rem;
+  .item-card h5 {
+    font-size: 1rem;
   }
 
-  .item-price,
-  .bg-secondary span {
-    font-size: .9rem;
+  .item-card span,
+  .item-price {
+    font-size: 0.9rem;
   }
 }

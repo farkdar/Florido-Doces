@@ -5,26 +5,24 @@
 
     // Render de um item (ajuste o HTML conforme seu layout)
     function renderItem({ img, titulo, preco, desc }) {
-        const priceHTML = preco ? `<div class="item-price mt-2">${preco}</div>` : '';
+  const priceHTML = preco ? `<div class="item-price mt-2">${preco}</div>` : '';
 
-        return `
+  return `
     <div class="col-lg-6">
-      <div class="d-flex h-100">
-        <div class="flex-shrink-0">
+      <!-- Card com fundo único -->
+      <div class="item-card d-flex h-100 bg-secondary border-inner p-3">
+        <div class="flex-shrink-0 me-3">
           <img class="product-thumb" src="${img}" alt="${titulo}">
         </div>
-        <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
-          <h5 class="text-uppercase">${titulo}</h5>
+        <div class="d-flex flex-column justify-content-center text-start flex-grow-1">
+          <h5 class="text-uppercase mb-1">${titulo}</h5>
           <span>${desc || ''}</span>
           ${priceHTML}
         </div>
       </div>
     </div>
   `;
-    }
-
-
-
+}
 
 
     function renderPane(pane) {
