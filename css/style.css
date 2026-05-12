@@ -197,6 +197,12 @@ h6,
   transition: .3s ease;
 }
 
+.logo-mobile {  /*Logo na navbar*/
+  max-height: 55px;
+  width: auto;
+  display: block;
+}
+
 .sticky-top.navbar-dark .navbar-nav .nav-link {
   padding: 20px 15px;
 }
