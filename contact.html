@@ -52,34 +52,31 @@
 </head>
 
 <body>
-    <!-- ======================================
-       NAVBAR — menu principal responsivo
-       ======================================
-       .navbar-expand-lg: expande o menu a partir de telas lg
-       .bg-dark .navbar-dark: esquema de cores
-  -->
+    <!-- ===================== NAVBAR (menu de navegação fixo no topo) ===================== -->
+    <!-- navbar-expand-lg: expande a navegação horizontal a partir de lg; antes disso vira menu colapsável -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
-        <!-- Marca alternativa visível apenas em mobile -->
+        <!-- Marca/Logo visível apenas no mobile (d-block d-lg-none) -->
         <a href="index.html" class="navbar-brand d-block d-lg-none" aria-label="Ir para Início">
-    <img src="img/VARIAÇÃO CORES_1.png" alt="Florido Doces Navbar" class="logo-mobile">
-</a>
+            <h1 class="m-0 text-uppercase text-white">
+                </i>Florido Doces
+            </h1>
+        </a>
 
-        <!-- Botão hamburguer (abre/fecha o menu no mobile) -->
+        <!-- Botão hamburguer para abrir/fechar o menu no mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Itens colapsáveis do menu -->
+        <!-- Área colapsável do menu: links de navegação -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- ms-auto: empurra itens para a direita; mx-lg-auto centraliza no desktop -->
             <div class="navbar-nav ms-auto mx-lg-auto py-0">
-                <a href="index.html" class="nav-item nav-link">Início</a>
-                <!-- .active marca a página atual -->
+                <a href="index.html" class="nav-item nav-link">Início</a><!-- active = página atual -->
                 <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
-                <a href="menu.html" class="nav-item nav-link">Cardápio &amp; Preços</a>
+                <a href="menu.html" class="nav-item nav-link">Cardápio & Preços</a>
                 <a href="team.html" class="nav-item nav-link">Chefes</a>
-
-                <!-- Dropdown "Páginas" 
+                <!-- Dropdown com outras páginas 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">Páginas</a>
@@ -87,13 +84,13 @@
                         <a href="service.html" class="dropdown-item">Nossos Serviços</a>
                         <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
                     </div>
-                </div>-->
-
-                <a href="contact.html" class="nav-item nav-link active" aria-current="page">Contato</a>
+                </div> -->
+                <a href="contact.html" class="nav-item nav-link active">Contato</a>
             </div>
         </div>
     </nav>
-    <!-- Fim Navbar -->
+    <!-- ===================== /NAVBAR ===================== -->
+
 
     <!-- ==================================
        CABEÇALHO DA PÁGINA (hero interno)
