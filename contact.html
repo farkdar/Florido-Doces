@@ -1,94 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><!-- Define o idioma principal (melhora SEO e acessibilidade) -->
+<!--
+  Página "Contato" (contact) do site de confeitaria.
+  Todo o conteúdo textual foi traduzido para pt-BR e
+  os comentários explicam a função de cada bloco/linha.
+-->
+<html lang="pt-BR">
 
 <head>
-<meta charset="utf-8"><!-- Suporte a acentuação e caracteres especiais -->
-<title>Florido Doces</title>
+    <!-- Codificação do documento -->
+    <meta charset="utf-8" />
 
-<!-- Viewport para layout responsivo em dispositivos móveis -->
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Título exibido na aba do navegador -->
+    <title>Florido Doces</title>
 
-<!-- Metatags de SEO básicas (ajuste para o seu negócio real) -->
-<meta content="Confeitaria, Bolos, Doces, Contato, Modelos HTML Gratuitos" name="keywords" />
-<meta content="Página de contato de um template gratuito para confeitaria, responsivo e personalizável."
-    name="description" />
+    <!-- Viewport para layout responsivo em dispositivos móveis -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<!-- Favicon do site -->
-<link href="img/favicon.ico" rel="icon" />
+    <!-- Metatags de SEO básicas (ajuste para o seu negócio real) -->
+    <meta content="Confeitaria, Bolos, Doces, Sobre nós, Modelos HTML Gratuitos" name="keywords" />
+    <meta content="Página 'Sobre Nós' de um template gratuito para confeitaria, responsivo e personalizável."
+        name="description" />
 
-<!--
-Google Fonts:
-- Open Sans para textos
-- Oswald para títulos
-- Pacifico para detalhes/branding
-Preconnect melhora a performance ao antecipar conexões.
+    <!-- Favicon do site -->
+    <link href="img/favicon.ico" rel="icon" />
 
--->
+    <!--
+    Google Fonts:
+    - Open Sans para textos
+    - Oswald para títulos
+    - Pacifico para detalhes/branding
+    Preconnect melhora a performance ao antecipar conexões.
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet" />
 
-<!-- Bibliotecas de ícones: Font Awesome e Bootstrap Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bibliotecas de ícones: Font Awesome e Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-<!-- CSS de terceiros: Owl Carousel (caso o tema use) -->
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- CSS de terceiros: Owl Carousel (se houver carrosséis nesta página/site) -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-<!-- Bootstrap (CSS) do tema -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap (CSS) do tema -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-<!-- CSS principal do template: identidade visual e utilitários customizados -->
-<link href="css/style.css" rel="stylesheet" />
+    <!-- CSS principal do template: identidade visual e utilitários customizados -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
 
-<!-- ======================================
-   NAVBAR — menu principal responsivo
-   ======================================
-   .navbar-expand-lg: expande o menu a partir de telas lg
-   .bg-dark .navbar-dark: esquema de cores
+<body>
+    <!-- ======================================
+       NAVBAR — menu principal responsivo
+       ======================================
+       .navbar-expand-lg: expande o menu a partir de telas lg
+       .bg-dark .navbar-dark: esquema de cores
+  -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <!-- Marca alternativa visível apenas em mobile -->
+        <a href="index.html" class="navbar-brand d-block d-lg-none" aria-label="Ir para a página inicial">
+            <h1 class="m-0 text-uppercase text-white">
+                <i class="fa fa-birthday-cake fs-1 text-primary me-3" aria-hidden="true"></i>Florido Doces
+            </h1>
+        </a>
 
--->Florido Doces
+        <!-- Botão hamburguer (abre/fecha o menu no mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Botão hamburguer (abre/fecha o menu no mobile) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Itens colapsáveis do menu -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Início</a>
+                <!-- .active marca a página atual -->
+                <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
+                <a href="menu.html" class="nav-item nav-link">Cardápio &amp; Preços</a>
+                <a href="team.html" class="nav-item nav-link">Chefes</a>
 
-    <!-- Itens colapsáveis do menu -->
-           <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto mx-lg-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Início</a>
-            <a href="about.html" class="nav-item nav-link">Sobre Nós</a>
-            <a href="menu.html" class="nav-item nav-link">Cardápio & Preços</a>
-            <a href="team.html" class="nav-item nav-link">Chefes</a>
-            <!-- Dropdown de páginas 
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Páginas</a>
-                <div class="dropdown-menu m-0">
-                    <a href="service.html" class="dropdown-item">Nossos Serviços</a>
-                    <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
-                </div>
-            </div>-->
-            <a href="contact.html" class="nav-item nav-link active">Contato</a>
+                <!-- Dropdown "Páginas" 
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Nossos Serviços</a>
+                        <a href="testimonial.html" class="dropdown-item">Depoimentos</a>
+                    </div>
+                </div>-->
+
+                <a href="contact.html" class="nav-item nav-link active" aria-current="page">Contato</a>
+            </div>
         </div>
-    </div>
-</nav>
-<!-- Fim Navbar -->
+    </nav>
+    <!-- Fim Navbar -->
 
-  <!-- ===================== CABEÇALHO DA PÁGINA (header interno) ===================== -->
-    <!-- bg-dark bg-img: fundo escuro com imagem definida no CSS; p-5/mb-5 ajustam espaçamentos -->
+    <!-- ==================================
+       CABEÇALHO DA PÁGINA (hero interno)
+       ==================================
+       .bg-dark + .bg-img aplicam fundo escuro com imagem (ver style.css)
+  -->
     <div class="container-fluid bg-dark bg-img p-5 mb-5">
         <div class="row">
             <div class="col-12 text-center">
-                <!-- Título principal da página (contexto atual) -->
+                <!-- Título principal da página -->
                 <h1 class="display-4 text-uppercase text-white">Contato</h1>
-                <!-- Breadcumbs simples (links meramente ilustrativos) -->
-                <a href="">Início</a>
-                <i class="far fa-square text-primary px-2" aria-hidden="true"></i>
-                <a href="">Contato</a>
             </div>
         </div>
     </div>
-
-        <!-- ===================== /CABEÇALHO DA PÁGINA ===================== -->
+    <!-- Fim Cabeçalho -->
 
     
 <!-- =======================
